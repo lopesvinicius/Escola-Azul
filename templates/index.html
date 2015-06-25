@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-6">
+					<ul>
+					<h1>Lista de alunos</h1>
+					<br />
+				    {% for aluno in todos_alunos %}
+				    <li>
+				        <a href="{{url_for('aluno', aluno_ra=aluno.id)}}">
+				         <h4> {{aluno.nome}}</h4>
+				        </a>
+				    </li>
+				    {% endfor %}
+					</ul>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+   
+{% endblock %}
+
+{% block content %}
+
+    <h1>Aluno {{id_aluno}} inserido com sucesso!</h1>
+    <a href="{{ url_for('aluno', aluno_ra = id_aluno) }}"> Ver ficha do aluno </a><br />
+    <a href="{{url_for('cadastro_alunos')}}"> Cadastrar novo aluno </a>	
+    
+{% endblock %}

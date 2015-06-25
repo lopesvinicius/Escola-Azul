@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title%}
+    
+{% endblock%}
+
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6">
+				<h1 style="text-align: center">Ficha cadastral</h1>
+				<h3>Nome: {{ aluno.nome }}</h3>
+				<h3>Idade: {{ aluno.idade }}</h3>
+				<h3>Sala: {{ aluno.sala }}</h3>
+				{% if aluno.imagem %}
+	        <img class="img-rounded" src="{{ url_for('media', filename=aluno.imagem) }}" width="100%" />
+	    	{% endif %}
+	    <hr />
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
